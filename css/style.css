@@ -18,6 +18,11 @@ html{
   box-sizing: border-box;
 }
 
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
 body {
 
   background: var(--background);
@@ -283,7 +288,7 @@ body {
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
     gap:18px;
 
@@ -446,9 +451,11 @@ section{
 
 @media (max-width: 900px) {
     .navbar {
+        width:92%;
+
         flex-direction: column;
 
-        padding:20px;
+        padding:18px;
         
         gap:20px;
     }
@@ -457,10 +464,17 @@ section{
         flex-direction: column;
         
         align-items:center;
+
+        gap:18px;
+    }
+
+    .hero{
+        padding:120px 20px 60px;
     }
 
     .hero h1 {
         font-size: 42px;
+        line-height:1,1;
     }
 
     .services h2,
@@ -477,7 +491,18 @@ section{
 
     .hero-buttons {
         flex-direction: column;
+        align-items:center;
     }
+
+    .stats,
+    .services-grid,
+    .gallery-grid,
+    .about,
+    .reviews-grid,
+    .contact-box,
+    .footer-container{
+    grid-template-columns:1fr;
+}
 
     .stats {
         flex-direction: column;
@@ -485,6 +510,42 @@ section{
         margin-top:50px;
 
         align-items: center;
+    }
+
+    .stat-card,
+    .service-card,
+    .feature,
+    .review-card,
+    .contact-card{
+    width:100%;
+    max-width:340px;
+    margin:0 auto;
+}
+
+    .gallery-card{
+        width:100%;
+        max-width:340;
+        margin:0 auto;
+        aspect-ratio:4/3;
+    }
+
+    .about{
+        text-align:center;
+        gap:50px;
+    }
+
+    .about-left h2,
+    .services h2,
+    .gallery h2,
+    .reviews h2,
+    .contact h2,
+    .cta h2{
+    font-size:36px;
+}
+
+    section{
+        padding-left:20px;
+        padding-right:20px;
     }
 
     .stats-card{
