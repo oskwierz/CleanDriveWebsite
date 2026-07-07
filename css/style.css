@@ -555,9 +555,6 @@ section{
         max-width:320px;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
 
     .gallery-grid{
 
@@ -584,6 +581,18 @@ section{
 
 .cta h2{
     font-size:36px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:1fr !important;
+    width:100%;
+}
+
+.service-card{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
 }
 
 }
@@ -731,6 +740,7 @@ footer{
 .footer-container{
     grid-template-columns:1fr;
     text-align: center;
+    width:100%;
 }
 
 .footer-logo h2{
@@ -752,6 +762,11 @@ footer{
     color:var(--grey);
     text-decoration:none;
     transition:.3s;
+}
+
+.footer-links a,
+.footer-contact p{
+    word-break:break-word;
 }
 
 .footer-links a:hover{
